@@ -14,26 +14,25 @@ body, html {
     color: #CCCCCC; /* Light gray text */
 }
 
+/* Sidebar styling */
 .sidebar {
     background: #1e1e1e;
-    padding: 30px;
-    width: 190px;
-    height: 100%;
+    width: 150px;
+    height: 100vh;
     position: fixed;
     right: 0;
     top: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; /* Center items vertically */
 }
 
-.logo {
-    /* Add logo styling here */
-}
-
+/* Navigation styling */
 .navigation-container {
-    transform: rotate(90deg); /* Rotate the container */
+    transform: rotate(90deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .navigation {
@@ -46,41 +45,24 @@ body, html {
     text-decoration: none;
     border-left: 3px solid transparent;
     transition: all 0.3s ease;
-    font-size: 1.5em;
-    margin-right: 150px; /* Add space to the right of each item */
-    white-space: nowrap; /* Prevent text from wrapping */
-    padding: 25px 0;
+    font-size: 2vh;
+    margin-right: 20%;
+    white-space: nowrap;
+    padding: 2%;
 }
 
 .navigation a:hover {
-    border-left: 3px solid #27AE60; /* Lighter green for key accents */
+    border-left: 3px solid #27AE60;
     padding-left: 5px;
 }
 
+/* Main content styling */
 .main-content {
-    margin-right: 250px; /* Changed from margin-left: 250px; */
+    margin-right: 200px;
     padding: 40px;
-}
-
-#welcome h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #27AE60; /* Lighter green for key accents */
-}
-
-.footer {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 0.8rem;
-    color: #CCCCCC;
-}
-
-.main-content {
     position: relative;
-    background-color: #333333; /* Deep gray background */
-    color: #CCCCCC; /* Light gray text */
-    padding: 50px; /* Adjust as needed */
-    /* Your existing styling */
+    background-color: #333333;
+    color: #CCCCCC;
 }
 
 .corner-design {
@@ -90,15 +72,12 @@ body, html {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 100px 100px 0 0; /* Adjust size as needed */
-    border-color: #27AE60 transparent transparent transparent; /* Lighter green for key accents */
+    border-width: 100px 100px 0 0;
+    border-color: #27AE60 transparent transparent transparent;
     z-index: 10;
 }
 
-
-
-
-/* General styles */
+/* Section styling */
 section {
     margin-bottom: 40px;
     color: #ffffff;
@@ -108,8 +87,9 @@ h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    color: #27AE60; /* Lighter green for key accents */
-    border-bottom: 2px solid #27AE60; /* Lighter green for key accents */}
+    color: #27AE60;
+    border-bottom: 2px solid #27AE60;
+}
 
 p, li {
     font-size: 1.2rem;
@@ -124,32 +104,64 @@ ul {
 
 /* About section */
 #about {
-    max-width: 800px; /* Adjust as needed */
+    max-width: 800px;
 }
 
 /* Skills section */
 #skills ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 1fr;
     gap: 20px;
+}
+
+.skill-box {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    margin: 10px;
+    min-height: 150px;
+}
+
+.skill-icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+}
+
+.skill-box:hover, .skill-box:active {
+    transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+}
+
+.skill-box:active {
+    transform: scale(0.95);
 }
 
 /* Projects section */
 .project-item {
-    background: #1e1e1e; /* Keep the project item color as it is */
-    border-left: 5px solid #27AE60; /* Lighter green for key accents */    padding: 20px;
+    background: #1e1e1e;
+    border-left: 5px solid #27AE60;
+    padding: 20px;
     margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .project-item:hover {
     transform: translateY(-5px);
-    background: #292929; /* Even lighter on hover for emphasis */
+    background: #292929;
 }
 
 /* Contact section */
 #contact form {
-    max-width: 800px; /* Adjust as needed */
+    max-width: 800px;
     margin-top: 20px;
 }
 
@@ -169,14 +181,14 @@ ul {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #2ECC71; /* Brighter green for buttons */
+    background-color: #2ECC71;
     color: #000;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #contact button:hover {
-    background-color: #28a9a5; /* Darken the button color on hover */
+    background-color: #28a9a5;
 }
 
 /* Responsive design */
@@ -186,42 +198,10 @@ ul {
     }
 }
 
-#skills ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 0;
-    list-style: none;
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2vh;
+    color: #CCCCCC;
 }
-
-.skill-box {
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px; /* Make the corners rounded */
-    color: #fff;
-    font-size: 1.2em;
-    margin: 10px; /* Add some space around the boxes */
-}
-
-.skill-icon {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-    vertical-align: middle;
-    filter: brightness(0) invert(1); /* Make the icon white */
-
-}
-
-.skill-box:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-.skill-box:active {
-    transform: scale(0.95);
-}
-
-.secondary-accent {
-    color: #3498DB; /* Muted blue */
-}
-
